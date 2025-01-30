@@ -128,7 +128,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Heart, Music, Film, ListTodo, Search, X, Menu } from 'lucide-react';
+import { Heart, Music, Film, ListTodo, Search, X, Menu,NotebookPen } from 'lucide-react';
 
 function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -201,10 +201,11 @@ function Navbar() {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <NavItem to="/" icon={Heart}>Album</NavItem>
+            <NavItem to="/" icon={Heart}>ForYou</NavItem>
             <NavItem to="/music" icon={Music}>Musics</NavItem>
             <NavItem to="/movies" icon={Film}>Movies</NavItem>
-            <NavItem to="/todos" icon={ListTodo}>To-Do</NavItem>
+            <NavItem to="/todos" icon={ListTodo}>ToDo</NavItem>
+            <NavItem to="/diary" icon={NotebookPen}>Diary</NavItem>
           </div>
 
           {/* Search bar */}
@@ -250,6 +251,7 @@ function Navbar() {
             <NavItem to="/music" icon={Music}>Music List</NavItem>
             <NavItem to="/movies" icon={Film}>Movie List</NavItem>
             <NavItem to="/todos" icon={ListTodo}>Todo List</NavItem>
+            <NavItem to="/diary" icon={NotebookPen}>Todo List</NavItem>
           </div>
         )}
       </nav>
